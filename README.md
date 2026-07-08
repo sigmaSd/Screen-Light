@@ -3,6 +3,8 @@
 A GTK4 GUI tool to adjust external monitor brightness via DDC/CI, built with
 Deno.
 
+<img width="500" height="280" alt="image" src="https://github.com/user-attachments/assets/d4786e54-b086-4d20-aff5-a3599a7b19c6" />
+
 ## Requirements
 
 - Linux with `ddccontrol` service running:
