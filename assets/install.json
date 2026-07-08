@@ -1,0 +1,7 @@
+{
+  "name": "Screen Light",
+  "id": "com.example.BrightnessControl",
+  "version": "1.0.0",
+  "description": "Adjust external monitor brightness via DDC/CI",
+  "icon": "brightness.svg"
+}
