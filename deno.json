@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@sigmasd/gtk": "jsr:@sigmasd/gtk@^0.65.0"
+  }
+}
