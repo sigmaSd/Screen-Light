@@ -1,6 +1,6 @@
 {
   "imports": {
-    "@sigmasd/gtk": "jsr:@sigmasd/gtk@^0.65.0"
+    "@sigmasd/gtk": "jsr:@sigmasd/gtk@^0.66.0"
   },
   "tasks": {
     "compile": "deno compile --allow-ffi --output screen-light main.ts",
