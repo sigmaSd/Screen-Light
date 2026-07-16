@@ -21,7 +21,7 @@ import {
 } from "@sigmasd/gtk/gio";
 import { EventLoop } from "@sigmasd/gtk/eventloop";
 
-const APP_ID = "com.example.BrightnessControl";
+const APP_ID = "io.github.sigmasd.ScreenLight";
 const DDC_BUS = "ddccontrol.DDCControl";
 const DDC_PATH = "/ddccontrol/DDCControl";
 const DDC_IFACE = "ddccontrol.DDCControl";

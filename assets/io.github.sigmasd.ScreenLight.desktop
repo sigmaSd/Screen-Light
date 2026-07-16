@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Screen Light
+Comment=Adjust external monitor brightness via DDC/CI
+Exec=screen-light
+Icon=io.github.sigmasd.ScreenLight
+Type=Application
+Categories=Settings;Hardware;
+Terminal=false

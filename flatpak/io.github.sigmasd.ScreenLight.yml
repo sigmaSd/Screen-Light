@@ -1,0 +1,57 @@
+app-id: io.github.sigmasd.ScreenLight
+runtime: org.gnome.Platform
+runtime-version: '50'
+sdk: org.gnome.Sdk
+command: screen-light
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=ipc
+  - --socket=system-bus
+  - --device=dri
+modules:
+  - name: screen-light
+    buildsystem: simple
+    build-options:
+      env:
+        DENO_DIR: deno_dir
+        DENORT_BIN: denort
+    build-commands:
+      - ./deno compile --vendor --no-check --output screen-light --allow-ffi
+        --cached-only ./main.ts
+      - install -D ./screen-light /app/bin/screen-light
+      - install -Dm0644 assets/io.github.sigmasd.ScreenLight.desktop
+        -t /app/share/applications/
+      - install -Dm0644 assets/io.github.sigmasd.ScreenLight.metainfo.xml
+        -t /app/share/metainfo/
+      - install -Dm0644 assets/io.github.sigmasd.ScreenLight.svg
+        -t /app/share/icons/hicolor/scalable/apps/
+      - install -Dm0644 LICENSE
+        -t /app/share/licenses/io.github.sigmasd.ScreenLight/
+    cleanup:
+      - /app/deno_dir
+    sources:
+      - deno-sources.json
+      - type: archive
+        url: https://github.com/sigmaSd/Screen-Light/archive/refs/tags/v1.0.0.tar.gz
+        sha256: PLACEHOLDER
+      - type: archive
+        url: https://github.com/denoland/deno/releases/download/v2.9.3/deno-x86_64-unknown-linux-gnu.zip
+        sha256: 8101865641cbede56f08ad19c0a67a87df84bce127fee0d3e3e1f7467717ffa6
+        only-arches:
+          - x86_64
+      - type: archive
+        url: https://github.com/denoland/deno/releases/download/v2.9.3/denort-x86_64-unknown-linux-gnu.zip
+        sha256: 9fd1ecebd84bfd99b406442f40176e32e948b00edb91221358ec44d25a2092bd
+        only-arches:
+          - x86_64
+      - type: archive
+        url: https://github.com/denoland/deno/releases/download/v2.9.3/deno-aarch64-unknown-linux-gnu.zip
+        sha256: 753937db98a4b56cbbbd26e8f00eb4b789191a229afec93f74bcfa4e79bc2c8b
+        only-arches:
+          - aarch64
+      - type: archive
+        url: https://github.com/denoland/deno/releases/download/v2.9.3/denort-aarch64-unknown-linux-gnu.zip
+        sha256: 38ea978dc575538f0779c62c2f1b7ab0306af2f918a449d1bf1af909d041a857
+        only-arches:
+          - aarch64

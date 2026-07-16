@@ -1,0 +1,6 @@
+# Flatpak vendor/deps (generated, not committed)
+flatpak/vendor
+flatpak/deno_dir
+
+# Compiled binary
+screen-light

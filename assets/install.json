@@ -1,7 +1,7 @@
 {
   "name": "Screen Light",
-  "id": "com.example.BrightnessControl",
+  "id": "io.github.sigmasd.ScreenLight",
   "version": "1.0.0",
   "description": "Adjust external monitor brightness via DDC/CI",
-  "icon": "brightness.svg"
+  "icon": "io.github.sigmasd.ScreenLight.svg"
 }
